@@ -1,0 +1,13 @@
+{
+  "name": "@jitendra19/utility",
+  "version": "1.0.0",
+  "description": "utility lib",
+  "license": "MIT",
+  "repository": "jitendra19/utility",
+  "main": "index.js",
+  "keywords": [
+    "JSUtility",
+    "npm",
+    "package"
+  ]
+}
