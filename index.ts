@@ -1,14 +1,16 @@
-module.exports = {
-    sortArray: function(arr, fieldName, sortType, startIndex, endIndex) {
+
+class utilities {
+	sortArray(arr: any[], fieldName: string, sortType: string, startIndex: number, endIndex: number) {
 		// validations yet to be introduced
 		const indexArr = arr.slice(startIndex,endIndex+1);
 		return indexArr.sort(function (x, y) {
-			let a = new Date(x[fieldName]),
-				b = new Date(y[fieldName]);
+			const a = x[fieldName],
+				b = y[fieldName];
 			return sortType === 'ASC' ? a - b : b - a;
 		});
-	},
-    generateRandomString: function(length, type) {
+	}
+
+	generateRandomString(length: number, type?: string) {
 		// can improve more
 		const createString = function(letters) {
 			let result = '';
@@ -23,8 +25,9 @@ module.exports = {
 			default:
 				return createString('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
 		}
-	},
-	generateSchema: function(obj) { 
+	}
+
+	generateSchema(obj) { 
 		// can improve more
 		const iter = function(a) {
 			Object.keys(a).forEach(function (k) {
@@ -38,4 +41,4 @@ module.exports = {
 		}
 		return iter(obj);
 	}
-};
+}
