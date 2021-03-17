@@ -1,6 +1,6 @@
 
 class utilities {
-	sortArray(arr: any[], fieldName: string, sortType: string, startIndex: number, endIndex: number) {
+	sortArray(arr: any[], fieldName: string, sortType: string, startIndex: number, endIndex: number): any[] {
 		// validations yet to be introduced
 		const indexArr = arr.slice(startIndex,endIndex+1);
 		return indexArr.sort(function (x, y) {
@@ -10,7 +10,7 @@ class utilities {
 		});
 	}
 
-	generateRandomString(length: number, type?: string) {
+	generateRandomString(length: number, type?: string): string {
 		// can improve more
 		const createString = function(letters) {
 			let result = '';
@@ -27,7 +27,7 @@ class utilities {
 		}
 	}
 
-	generateSchema(obj) { 
+	generateSchema(obj): object { 
 		// can improve more
 		const iter = function(a) {
 			Object.keys(a).forEach(function (k) {
